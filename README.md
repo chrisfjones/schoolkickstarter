@@ -7,7 +7,7 @@ For teachers, schools, PTA and parent groups: Get your school field trip funded,
 
 For YOU: Find a way to give back. Donate your extra things or time or money to your local schools, strengthening your community and schools.
 
-<img src="http://cl.ly/1P0M1F3J1C2C2O2j0N3h">
+<img src="whiteboard.jpg">
 
 Entities:
 
