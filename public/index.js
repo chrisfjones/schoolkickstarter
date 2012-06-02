@@ -5,13 +5,14 @@
   $(function() {
     var projects;
     projects = new Firebase('http://gamma.firebase.com/chrisfjones/projects');
-    return projects.on("value", function(snapshot) {
+    return projects.once("value", function(snapshot) {
       var id, list, project, template, _results;
       list = snapshot.val();
       _results = [];
       for (id in list) {
         if (!__hasProp.call(list, id)) continue;
         project = list[id];
+        console.log(project.toSource());
         template = "<div class='project'>{{name}}</div><br>";
         _results.push($('#list').append(Mustache.to_html(template, project)));
       }
