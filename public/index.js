@@ -19,8 +19,9 @@
       for (id in list) {
         if (!__hasProp.call(list, id)) continue;
         project = list[id];
-        console.log(project.toSource());
-        template = "<div class='project'><a href='projectDetails.html?{{name}}'>{{name}}</div><br>";
+        console.log(id);
+        project.pid = id;
+        template = "<div class='project'><a href='projectDetails.html\#{{pid}}'>{{name}}</div><br>";
         _results.push($('#list').append(Mustache.to_html(template, project)));
       }
       return _results;
