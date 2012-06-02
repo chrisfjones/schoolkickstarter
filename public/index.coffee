@@ -7,7 +7,6 @@ $ ->
   projects.once "value", (snapshot) ->
     list = snapshot.val()
     for own id, project of list
-      console.log id
       project.pid = id
       template = "<div class='project'><a href='projectDetails.html\#{{pid}}'>{{name}}</div><br>"
       $('#list').append Mustache.to_html template, project 
