@@ -28,6 +28,7 @@
     <script src="jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="jquery-ui-1.8.20.custom.min.js"></script>
     <script src="projectDetails.js"></script>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -64,37 +65,41 @@
 
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="span9">
+        <div class="span8">
             <div>
-                <div class="hero-unit">
-                    <h1 id="projectName"></h1>
-                    <p id="projectDescription"></p>
-                </div>
+                <h1 id="projectName"></h1>
+                <img id="projectImage">
+                <h3 id="projectHeading"></h3>
+                <p id="projectDescription"></p>
             </div>
-
         </div>
-        <div class="span3">
+        <div class="span4">
             <h2>Status</h2>
-            <div id="moneyDonated" style="float: left; width: 0px; background-color: green; height: 50px;"></div>
-            <br>
-            <br>
+            <div class="well">
+                <table>
+                    <tr>
+                        <td id="donationGoal"></td>
+                        <td>
+                            <div id="moneyDonated" style="float: left; width: 0px; background-color: green; height: 20px;"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <select id="donateAmount">
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="20">20</option>
             </select>
-            <button id="donateButton">Donate</button>
+            <a id="donateButton" class="btn btn-primary btn-success btn-large">Donate</a>
         </div><!--/span-->
     </div><!--/row-->
 
     <hr>
 
     <footer>
-        <p>&copy; Company 2012</p>
     </footer>
 
 </div><!--/.fluid-container-->
 
 </body>
 </html>
-

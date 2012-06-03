@@ -7,12 +7,16 @@ $ ->
   projectData.on 'value', (projectSnapshot) ->
     project = projectSnapshot.val()
     $('#projectName').text project.name
+    $('#projectHeading').text project.descriptionHeading
+    $('#projectDescription').text project.description
+    $('#projectImage').attr 'src', project.image
     moneyNeeded = project.maxMoneyNeeded
     moneyDonated = project.moneyDonated
     moneyRatio = moneyDonated / moneyNeeded
-    console.log (moneyRatio * 300)
-    $('#moneyDonated').width (moneyRatio * 300)
+    console.log (moneyRatio * 100)
+    $('#moneyDonated').width "#{(moneyRatio * 100)}%"
     $('#moneyDonated').text moneyDonated
+    $('#donationGoal').text "$#{moneyNeeded}"
     $('#donateButton').unbind().click (e) ->
       donateAmount = parseInt $('#donateAmount').val()
       console.log donateAmount
